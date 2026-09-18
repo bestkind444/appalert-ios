@@ -694,13 +694,13 @@ document.querySelectorAll('.demo-btn').forEach(btn => btn.addEventListener('clic
 const installs = [
   ['npm', 'npm install @bestkindweb/appalert-ios'],
   ['yarn', 'yarn add @bestkindweb/appalert-ios'],
-  ['html', '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@1.0.2/dist/appalert.css" />\n<script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@1.0.2/dist/appalert.js"><\/script>']
+  ['html', '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@latest/dist/appalert.css" />\n<script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@latest/dist/appalert.js"><\/script>']
 ];
 document.getElementById('installGrid').innerHTML = installs.map((row,i) =>
   '<div><div class="code-label">' + row[0].toUpperCase() + '</div><div class="code-block"><div class="code-bar"><span class="lang">' + row[0] + '</span><button class="copy-btn" data-copy-i="' + i + '">Copy</button></div><pre id="install' + i + '">' + row[1].replace(/</g,'&lt;') + '</pre></div></div>'
 ).join('');
 
-const quickstart = '<!DOCTYPE html>\n<html>\n<head>\n  <meta name="viewport" content="width=device-width, initial-scale=1" />\n  <script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@1.0.2/dist/appalert.js"><\/script>\n</head>\n<body>\n  <button onclick="AppAlert.toast(\'Hello from Enugu\')">Say hi</button>\n\n  <script>\n    AppAlert.toast(\'Welcome\', 2500);\n    AppAlert.loading(\'Processing...\');\n    setTimeout(() => AppAlert.hideLoading(), 2000);\n  <\/script>\n</body>\n</html>';
+const quickstart = '<!DOCTYPE html>\n<html>\n<head>\n  <meta name="viewport" content="width=device-width, initial-scale=1" />\n  <script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@latest/dist/appalert.js"><\/script>\n</head>\n<body>\n  <button onclick="AppAlert.toast(\'Hello from Enugu\')">Say hi</button>\n\n  <script>\n    AppAlert.toast(\'Welcome\', 2500);\n    AppAlert.loading(\'Processing...\');\n    setTimeout(() => AppAlert.hideLoading(), 2000);\n  <\/script>\n</body>\n</html>';
 document.getElementById('quickstartBlock').innerHTML =
   '<div class="code-block"><div class="code-bar"><span class="lang">html</span><button class="copy-btn" data-copy-raw="qs">Copy</button></div><pre id="qs">' + quickstart.replace(/</g,'&lt;') + '</pre></div>';
 
@@ -761,7 +761,7 @@ export class AppAlertService {
 }` },
   laravel: { title:'Laravel / Livewire', desc:'Trigger AppAlert from a Livewire component via a dispatched browser event.', code:
 `{{-- layout --}}
-<script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@1.0.2/dist/appalert.js"><\/script>
+<script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@latest/dist/appalert.js"><\/script>
 
 @script
 <script>
@@ -771,7 +771,7 @@ export class AppAlertService {
 <\/script>
 @endscript` },
   vanilla: { title:'Plain JavaScript', desc:'Works on any site — include the CDN build and call it.', code:
-`<script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@1.0.2/dist/appalert.js"><\/script>
+`<script src="https://cdn.jsdelivr.net/npm/@bestkindweb/appalert-ios@latest/dist/appalert.js"><\/script>
 
 <script>
   AppAlert.toast('Simple message', 2000);
